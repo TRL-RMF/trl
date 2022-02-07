@@ -1,0 +1,92 @@
+<?xml version='1.0' ?>
+
+<launch>
+  <arg name="use_sim_time" default="false"/>
+  <arg name="failover_mode" default="false"/>
+
+  <!-- Common launch -->
+  <include file="$(find-pkg-share rmf_demos)/common.launch.xml">
+    <arg name="use_sim_time" value="$(var use_sim_time)"/>
+    <arg name="initial_map" value="TRL_L4"/>
+    <arg name="viz_config_file" value ="$(find-pkg-share trl_demos)/rviz/trl.rviz"/>
+
+    <!-- Change yaml to whatever building yaml-->
+    <arg name="config_file" value="$(find-pkg-share trl_demos_maps)/trl/trl.building.yaml"/>
+    <arg name="dashboard_config_file" value="$(find-pkg-share rmf_demos_dashboard_resources)/office/dashboard_config.json"/>
+  </include>
+
+  <!-- TinyRobot fleet adapter and robot state aggregator needed for the TinyRobot slotcar_plugin -->
+  <group>
+    <let name="fleet_name" value="tinyRobot"/>
+    <include file="$(find-pkg-share trl_demos)/adapters/tinyRobot_adapter.launch.xml">
+      <arg name="fleet_name" value="$(var fleet_name)"/>
+      <arg name="use_sim_time" value="$(var use_sim_time)"/>
+      <arg name="nav_graph_file" value="$(find-pkg-share trl_demos_maps)/maps/trl/nav_graphs/0.yaml" />
+    </include>
+    <include file="$(find-pkg-share rmf_fleet_adapter)/robot_state_aggregator.launch.xml">
+      <arg name="robot_prefix" value="tinyRobot"/>
+      <arg name="fleet_name" value="$(var fleet_name)"/>
+      <arg name="use_sim_time" value="$(var use_sim_time)"/>
+      <arg name="failover_mode" value="$(var failover_mode)"/>
+    </include>
+  </group>
+
+
+  <!-- DeliveryRobot fleet adapter and robot state aggregator needed for DeliveryRobot slotcar_plugin -->
+  <group>
+    <let name="fleet_name" value="deliveryRobot"/>
+    <include file="$(find-pkg-share trl_demos)/adapters/deliveryRobot_adapter.launch.xml">
+      <arg name="fleet_name" value="$(var fleet_name)"/>
+      <arg name="use_sim_time" value="$(var use_sim_time)"/>
+      <arg name="nav_graph_file" value="$(find-pkg-share trl_demos_maps)/maps/trl/nav_graphs/0.yaml" />
+    </include>
+    <include file="$(find-pkg-share rmf_fleet_adapter)/robot_state_aggregator.launch.xml">
+      <arg name="robot_prefix" value="deliveryRobot"/>
+      <arg name="fleet_name" value="$(var fleet_name)"/>
+      <arg name="use_sim_time" value="$(var use_sim_time)"/>
+      <arg name="failover_mode" value="$(var failover_mode)"/>
+    </include>
+  </group>
+
+  <!-- cleanerBotA fleet adapter and robot state aggregator needed for the slotcar_plugin -->
+  <group>
+    <let name="fleet_name" value="cleanerBotA"/>
+    <include file="$(find-pkg-share trl_demos)/adapters/cleanerBotA_adapter.launch.xml">
+      <arg name="fleet_name" value="$(var fleet_name)"/>
+      <arg name="use_sim_time" value="$(var use_sim_time)"/>
+      <arg name="nav_graph_file" value="$(find-pkg-share trl_demos_maps)/maps/trl/nav_graphs/0.yaml" />
+    </include>
+    <include file="$(find-pkg-share rmf_fleet_adapter)/robot_state_aggregator.launch.xml">
+      <arg name="robot_prefix" value="$(var fleet_name)"/>
+      <arg name="fleet_name" value="$(var fleet_name)"/>
+      <arg name="use_sim_time" value="$(var use_sim_time)"/>
+      <arg name="failover_mode" value="$(var failover_mode)"/>
+    </include>
+  </group>
+
+    <!-- cleanerBotE fleet adapter and robot state aggregator needed for the slotcar_plugin -->
+    <group>
+      <let name="fleet_name" value="cleanerBotE"/>
+      <include file="$(find-pkg-share trl_demos)/adapters/cleanerBotE_adapter.launch.xml">
+        <arg name="fleet_name" value="$(var fleet_name)"/>
+        <arg name="use_sim_time" value="$(var use_sim_time)"/>
+        <arg name="nav_graph_file" value="$(find-pkg-share trl_demos_maps)/maps/trl/nav_graphs/0.yaml" />
+      </include>
+      <include file="$(find-pkg-share rmf_fleet_adapter)/robot_state_aggregator.launch.xml">
+        <arg name="robot_prefix" value="$(var fleet_name)"/>
+        <arg name="fleet_name" value="$(var fleet_name)"/>
+        <arg name="use_sim_time" value="$(var use_sim_time)"/>
+        <arg name="failover_mode" value="$(var failover_mode)"/>
+      </include>
+    </group>
+  
+
+  <!-- Mock Docker Node, to provide Fleet Adapter fix cleaning task paths -->
+  <group>
+    <let name="docking_config_file" value="$(find-pkg-share trl_demos)/docker/trl_docker_config.yaml"/>
+    <node pkg="rmf_demos_tasks" exec="mock_docker" args="-c $(var docking_config_file)">
+      <param name="use_sim_time" value="$(var use_sim_time)"/>
+    </node>
+  </group>
+
+</launch>

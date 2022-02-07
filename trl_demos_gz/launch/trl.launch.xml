@@ -1,0 +1,22 @@
+<?xml version='1.0' ?>
+<!-- Launching the world file only on gazebo with rmf -->
+
+<launch>
+  <arg name="gazebo_version" default="11"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="failover_mode" default="false"/>
+
+  <!-- Common launch -->
+  <include file="$(find-pkg-share trl_demos)/trl.launch.xml">
+    <arg name="use_sim_time" value="$(var use_sim_time)"/>
+    <arg name="failover_mode" value="$(var failover_mode)"/>
+  </include>
+
+  <!-- Simulation launch -->
+  <include file="$(find-pkg-share trl_demos_gz)/simulation.launch.xml">
+    <arg name="map_name" value="trl" />
+    <arg name ="map_package" value="trl_demos_maps"/>
+    <arg name="gazebo_version" value="$(var gazebo_version)" />
+  </include>
+
+</launch>
