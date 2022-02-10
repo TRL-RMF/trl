@@ -1,7 +1,7 @@
 coordinate_system: reference_image
 crowd_sim:
   agent_groups:
-    - {agents_name: [cleanerBotA_2X, cleanerBotA_2A, cleanerBotA_2B, cleanerBotA_2C, cleanerBotE_3X, cleanerBotA_3A, cleanerBotE_4A, cleanerBotE_4B, cleanerBotA_4C, cleanerBotE_5A, tinyRobot1, tinyRobot0], agents_number: 12, group_id: 0, profile_selector: external_agent, state_selector: external_static, x: 0, y: 0}
+    - {agents_name: [cleanerBotA_2X, cleanerBotA_2A, cleanerBotA_2B, cleanerBotA_2C, cleanerBotA_3A, cleanerBotE_4A, cleanerBotE_4B, cleanerBotA_4C, cleanerBotE_5A, tinyRobot1, tinyRobot0], agents_number: 11, group_id: 0, profile_selector: external_agent, state_selector: external_static, x: 0, y: 0}
   agent_profiles:
     - {ORCA_tau: 1, ORCA_tauObst: 0.4, class: 1, max_accel: 0, max_angle_vel: 0, max_neighbors: 10, max_speed: 0, name: external_agent, neighbor_dist: 5, obstacle_set: 1, pref_speed: 0, r: 0.25}
   enable: 0
@@ -112,7 +112,7 @@ levels:
     models:
       - {model_name: OpenRobotics/LitterBin, name: OpenRobotics/LitterBin, static: true, x: 258.474, y: 321.112, yaw: 1.5708, z: 0}
       - {model_name: OpenRobotics/LitterBin, name: OpenRobotics/LitterBin, static: true, x: 342.866, y: 321.609, yaw: 1.5708, z: 0}
-      - {model_name: OpenRobotics/LitterBin, name: OpenRobotics/LitterBin, static: true, x: 427.506, y: 321.361, yaw: 1.5708, z: 0}
+      - {model_name: OpenRobotics/LitterBin, name: OpenRobotics/LitterBin, static: true, x: 428.35, y: 320.301, yaw: 1.5708, z: 0}
       - {model_name: OpenRobotics/LitterBin, name: OpenRobotics/LitterBin, static: true, x: 512.891, y: 321.361, yaw: 1.5708, z: 0}
       - {model_name: OpenRobotics/LitterBin, name: OpenRobotics/LitterBin, static: true, x: 683.721, y: 207.627, yaw: 1.5708, z: 0}
       - {model_name: OpenRobotics/LitterBin, name: OpenRobotics/LitterBin, static: true, x: 768.4450000000001, y: 208.318, yaw: 1.5708, z: 0}
@@ -271,15 +271,28 @@ levels:
       - [1099.195, 265.116, 0, L2_zoneC_start]
       - [1098.592, 274.357, 0, L2_zoneC, {dock_name: [1, L2_zoneC], is_cleaning_zone: [4, true]}]
       - [361.553, 266.452, 0, L2_zoneA_start]
-      - [351.039, 277.163, 0, L2_zoneA, {dock_name: [1, L2_zoneA], is_cleaning_zone: [4, true]}]
-      - [332.241, 279.947, 0, L2_zoneA_clean_2]
-      - [331.738, 310.531, 0, L2_zoneA_clean_1]
-      - [364.173, 294.949, 0, L2_zoneA_clean_0]
+      - [351.098, 274.18, 0, L2_zoneA, {dock_name: [1, L2_zoneA], is_cleaning_zone: [4, true]}]
+      - [511.777, 281.726, 0, L2_zoneA_clean_2]
+      - [480.899, 275.287, 0, L2_zoneA_clean_1]
+      - [412.851, 275.433, 0, L2_zoneA_clean_0]
       - [164.998, 33.012, 0, cleanerBotA_2X_spawn, {is_charger: [4, true], is_holding_point: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, cleanerBotA_2X], spawn_robot_type: [1, CleanerBotA]}]
       - [339.116, 266.706, 0, cleanerBotA_2A_spawn, {is_charger: [4, true], is_holding_point: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, cleanerBotA_2A], spawn_robot_type: [1, CleanerBotA]}]
       - [755.648, 234.42, 0, cleanerBotA_2B_spawn, {is_charger: [4, true], is_holding_point: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, cleanerBotA_2B], spawn_robot_type: [1, CleanerBotA]}]
       - [1078.52, 263.235, 0, cleanerBotA_2C_spawn, {is_charger: [4, true], is_holding_point: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, cleanerBotA_2C], spawn_robot_type: [1, CleanerBotA]}]
       - [1128.873, 274.105, 0, ""]
+      - [511.045, 310.847, 0, L2_zoneA_clean_3]
+      - [483.826, 322.994, 0, L2_zoneA_clean_4]
+      - [455.29, 314.603, 0, L2_zoneA_clean_5]
+      - [426.864, 324.968, 0, L2_zoneA_clean_6]
+      - [389.401, 297.995, 0, L2_zoneA_clean_7]
+      - [351.605, 305.987, 0, L2_zoneA_clean_8]
+      - [342.281, 313.812, 0, L2_zoneA_clean_9]
+      - [297.07, 292.737, 0, L2_zoneA_clean_10]
+      - [269.762, 322.878, 0, L2_zoneA_clean_11]
+      - [201.059, 323.107, 0, L2_zoneA_clean_12]
+      - [191.126, 299.794, 0, L2_zoneA_clean_13]
+      - [203.266, 276.894, 0, L2_zoneA_clean_14]
+      - [289.897, 273.86, 0, L2_zoneA_clean_15]
     walls:
       - [0, 1, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
       - [1, 2, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]

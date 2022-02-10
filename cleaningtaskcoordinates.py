@@ -9,7 +9,7 @@ building_name = "TRL"
 levels = ["L2", "L3", "L4", "L5", "L6"]
 clean_zone_names = ["zoneA","zoneB","zoneC"]
 clean_zone_index = {}
-output_file_name = "output.yaml"
+output_file_name = "/home/ubuntu/trl_demos_ws/src/trl/trl_demos/include/docker/trl_docker_config.yaml"
 building_file_path = "/home/ubuntu/trl_demos_ws/src/trl/trl_demos_maps/maps/trl/trl.building.yaml"
 zone_index = 0
 
@@ -47,7 +47,8 @@ def calculating(x_pixel, y_pixel, level):
 
 
 def get_number(clean_zone_thing):
-    return(int(clean_zone_thing[-1][-1])) #obtain clean zone coordinate number
+    x = clean_zone_thing[-1].split("_")
+    return(int(x[-1])) #obtain clean zone coordinate number
 
 def get_cleaning_points(clean_zone_place, level_name):
     cleaning_points_list = []
