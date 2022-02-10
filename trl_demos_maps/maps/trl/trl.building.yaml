@@ -1,7 +1,7 @@
 coordinate_system: reference_image
 crowd_sim:
   agent_groups:
-    - {agents_name: [cleanerBotA_2X, cleanerBotA_2A, cleanerBotA_2B, cleanerBotA_2C, cleanerBotE_3X, cleanerBotA_3A, cleanerBotE_4A, cleanerBotE_4B, cleanerBotA_4C, cleanerBotE_5A, tinyRobot1, tinyRobot0, cleanerBotE_test, cleanerBotE_test2, cleanerBotE_test3], agents_number: 15, group_id: 0, profile_selector: external_agent, state_selector: external_static, x: 0, y: 0}
+    - {agents_name: [cleanerBotA_2X, cleanerBotA_2A, cleanerBotA_2B, cleanerBotA_2C, cleanerBotE_3X, cleanerBotA_3A, cleanerBotE_4A, cleanerBotE_4B, cleanerBotA_4C, cleanerBotE_5A, tinyRobot1, tinyRobot0], agents_number: 12, group_id: 0, profile_selector: external_agent, state_selector: external_static, x: 0, y: 0}
   agent_profiles:
     - {ORCA_tau: 1, ORCA_tauObst: 0.4, class: 1, max_accel: 0, max_angle_vel: 0, max_neighbors: 10, max_speed: 0, name: external_agent, neighbor_dist: 5, obstacle_set: 1, pref_speed: 0, r: 0.25}
   enable: 0
@@ -397,6 +397,10 @@ levels:
       - [141, 142, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
       - [142, 137, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
   TRL_L3:
+    constraints:
+      - {ids: ["{407eeaee-8a01-45f9-b9b9-5bfece51c1b6}", "{7b0c2d97-0bd1-4922-b2c7-842a0a9a16c8}"]}
+      - {ids: ["{ec124ab7-d65a-4c35-a5c8-3013bdbb0d63}", "{72a01a55-cab5-4955-b888-16161d8ba862}"]}
+      - {ids: ["{3eac623a-b8f9-482c-b139-eb6b43c9ea5d}", "{08ea151b-a1e5-488c-952b-bac56402b5e2}"]}
     doors:
       - [4, 32, {motion_axis: [1, start], motion_degrees: [3, 90], motion_direction: [2, -1], name: [1, service-lobby_L3_door], plugin: [1, normal], right_left_ratio: [3, 1], type: [1, double_hinged]}]
       - [25, 26, {motion_axis: [1, start], motion_degrees: [3, 90], motion_direction: [2, -1], name: [1, playground1_L3_door], plugin: [1, normal], right_left_ratio: [3, 1], type: [1, double_hinged]}]
@@ -408,6 +412,10 @@ levels:
     drawing:
       filename: trl_floor_plans/non-anotated/3rd fl main.png
     elevation: 15
+    features:
+      - {id: "{72a01a55-cab5-4955-b888-16161d8ba862}", name: "", x: 455.38, y: 292.747}
+      - {id: "{407eeaee-8a01-45f9-b9b9-5bfece51c1b6}", name: "", x: 835.624, y: 291.156}
+      - {id: "{3eac623a-b8f9-482c-b139-eb6b43c9ea5d}", name: "", x: 63.814, y: 133.425}
     fiducials:
       - [167.213, 65.38200000000001, servicelift_fl]
       - [175.8, 162.373, escalator_a]
@@ -425,33 +433,33 @@ levels:
       - [127, 128, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [128, 129, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [130, 131, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
-      - [131, 132, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [132, 133, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [133, 134, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [134, 135, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
-      - [135, 136, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
-      - [136, 130, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
-      - [126, 138, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [135, 130, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [126, 137, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [137, 138, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [138, 139, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
-      - [139, 140, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
-      - [140, 129, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [139, 129, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [124, 0, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
-      - [143, 130, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
-      - [143, 141, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
-      - [129, 144, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
-      - [144, 143, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
-      - [137, 135, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
-      - [132, 146, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
-      - [146, 147, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [142, 130, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [142, 140, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [129, 143, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [143, 142, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [136, 134, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
     layers:
       robot-map_L3:
         color: [1, 0, 0, 0.5]
+        features:
+          - {id: "{ec124ab7-d65a-4c35-a5c8-3013bdbb0d63}", name: "", x: 814.549, y: 665.217}
+          - {id: "{7b0c2d97-0bd1-4922-b2c7-842a0a9a16c8}", name: "", x: 1481.734, y: 749.717}
+          - {id: "{08ea151b-a1e5-488c-952b-bac56402b5e2}", name: "", x: 145.51, y: 324.728}
         filename: trl_pgm/trl_l3_caato2.png
         transform:
-          scale: 0.0525
-          translation_x: -4.8
-          translation_y: -3.5
-          yaw: 0.11
+          scale: 0.05144581926233786
+          translation_x: -3.490609176925703
+          translation_y: -3.376885674587297
+          yaw: 0.105813131144151
         visible: true
     measurements:
       - [120, 121, {distance: [3, 12.056]}]
@@ -602,7 +610,6 @@ levels:
       - [294.302, 310.824, 0, ""]
       - [835.914, 312.355, 0, ""]
       - [888.353, 285.562, 0, ""]
-      - [992.082, 297.045, 0, cleanerBotE_3X_spawn, {is_charger: [4, true], is_holding_point: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, cleanerBotE_3X], spawn_robot_type: [1, CleanerBotE]}]
       - [961.8440000000001, 373.215, 0, ""]
       - [917.0599999999999, 376.277, 0, ""]
       - [909.788, 347.952, 0, ""]
@@ -616,9 +623,6 @@ levels:
       - [388.167, 310.867, 0, L3_zoneA_start]
       - [364.813, 310.178, 0, cleanerBotA_3A_spawn, {is_charger: [4, true], is_holding_point: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, cleanerBotA_3A], spawn_robot_type: [1, CleanerBotA]}]
       - [402.953, 328.474, 0, ""]
-      - [1009.476, 310.387, 0, L3_zoneX_start]
-      - [1005.695, 330.549, 0, L3_zoneX, {dock_name: [1, L3_zoneX], is_cleaning_zone: [4, true]}]
-      - [992.575, 322.735, 0, ""]
     walls:
       - [1, 2, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
       - [2, 3, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
@@ -727,6 +731,13 @@ levels:
       - [116, 118, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
       - [118, 110, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
   TRL_L4:
+    constraints:
+      - {ids: ["{022ff449-00a9-481f-9962-7b8849f36c36}", "{7b24acd5-65c1-4df6-94b0-c2994c3e2866}"]}
+      - {ids: ["{168a2429-3113-4ef9-9c35-7d3b54b66fd4}", "{58258b79-38d9-4cfc-a555-11267d83aa6c}"]}
+      - {ids: ["{91fedb4d-3e9f-4b3d-8a2a-ea0a921cf9f0}", "{21123309-7f21-45b8-878e-0ed6cc3ea26a}"]}
+      - {ids: ["{4f904481-c2ce-411c-ad0e-b308277a407e}", "{9f414631-c2cc-4cc9-b4f1-70d0c261e7da}"]}
+      - {ids: ["{f81c4cc5-b954-46ed-828c-1d55df4db54c}", "{0af821e1-f794-4951-ae79-5c6f0d1cdc56}"]}
+      - {ids: ["{90ac27cc-3d68-4920-8a82-83560c51dfb5}", "{30b44d2b-704d-41b4-9864-efb03fda8a41}"]}
     doors:
       - [94, 91, {motion_axis: [1, start], motion_degrees: [3, 90], motion_direction: [2, 1], name: [1, outdoor_L4_door], plugin: [1, normal], right_left_ratio: [3, 1], type: [1, double_hinged]}]
       - [51, 52, {motion_axis: [1, start], motion_degrees: [3, 90], motion_direction: [2, -1], name: [1, smokestop_L4_door], plugin: [1, normal], right_left_ratio: [3, 1], type: [1, double_hinged]}]
@@ -741,6 +752,13 @@ levels:
     drawing:
       filename: trl_floor_plans/non-anotated/4th Floor Combined.png
     elevation: 30
+    features:
+      - {id: "{7b24acd5-65c1-4df6-94b0-c2994c3e2866}", name: "", x: 300.147, y: 1554.054}
+      - {id: "{168a2429-3113-4ef9-9c35-7d3b54b66fd4}", name: "", x: 569.5119999999999, y: 1452.232}
+      - {id: "{21123309-7f21-45b8-878e-0ed6cc3ea26a}", name: "", x: 330.381, y: 1381.534}
+      - {id: "{4f904481-c2ce-411c-ad0e-b308277a407e}", name: "", x: 99.428, y: 911.405}
+      - {id: "{0af821e1-f794-4951-ae79-5c6f0d1cdc56}", name: "", x: 176.88, y: 384.225}
+      - {id: "{90ac27cc-3d68-4920-8a82-83560c51dfb5}", name: "", x: 449.482, y: 1637.727}
     fiducials:
       - [232.55, 1281.321, servicelift_fl]
       - [282.365, 1320.313, servicelift_br]
@@ -776,12 +794,19 @@ levels:
     layers:
       robot-map_L4:
         color: [1, 0, 0, 0.5]
+        features:
+          - {id: "{022ff449-00a9-481f-9962-7b8849f36c36}", name: "", x: 613.125, y: 2500.617}
+          - {id: "{58258b79-38d9-4cfc-a555-11267d83aa6c}", name: "", x: 1031.756, y: 2337.299}
+          - {id: "{91fedb4d-3e9f-4b3d-8a2a-ea0a921cf9f0}", name: "", x: 655.711, y: 2227.328}
+          - {id: "{9f414631-c2cc-4cc9-b4f1-70d0c261e7da}", name: "", x: 272.774, y: 1509.499}
+          - {id: "{f81c4cc5-b954-46ed-828c-1d55df4db54c}", name: "", x: 357.5, y: 685.852}
+          - {id: "{30b44d2b-704d-41b4-9864-efb03fda8a41}", name: "", x: 847.234, y: 2628.754}
         filename: trl_pgm/trl_l4_caato2.png
         transform:
-          scale: 0.0512
-          translation_x: -3.1
-          translation_y: -4
-          yaw: -0.03
+          scale: 0.05162446084323011
+          translation_x: -3.309610020972011
+          translation_y: -4.96570799640278
+          yaw: -0.03240750960400392
         visible: true
     measurements:
       - [121, 59, {distance: [3, 41.1]}]
@@ -1144,6 +1169,9 @@ levels:
       - [155, 156, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
       - [156, 149, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
   TRL_L5:
+    constraints:
+      - {ids: ["{27cfa58e-7ff3-4386-95e9-13b557b7621d}", "{80ffbd5d-19eb-46a2-9fad-b7695e0290bb}"]}
+      - {ids: ["{e1d315ac-27b3-48ea-bc29-9e73a6aaa289}", "{e46bf8e4-5126-42e6-835a-08af8cd5d87c}"]}
     doors:
       - [27, 26, {motion_axis: [1, start], motion_degrees: [3, 90], motion_direction: [2, -1], name: [1, jog_L5_door], plugin: [1, normal], right_left_ratio: [3, 1], type: [1, double_hinged]}]
       - [31, 32, {motion_axis: [1, start], motion_degrees: [3, 90], motion_direction: [2, 1], name: [1, smartwork1_L5_door], plugin: [1, normal], right_left_ratio: [3, 1], type: [1, double_hinged]}]
@@ -1154,6 +1182,9 @@ levels:
     drawing:
       filename: trl_floor_plans/non-anotated/5th fl main.png
     elevation: 45
+    features:
+      - {id: "{80ffbd5d-19eb-46a2-9fad-b7695e0290bb}", name: "", x: 376.944, y: 1050.56}
+      - {id: "{e1d315ac-27b3-48ea-bc29-9e73a6aaa289}", name: "", x: 52.692, y: 202.237}
     fiducials:
       - [150.774, 855.096, servicelift_fl]
       - [187.227, 883.913, servicelift_br]
@@ -1171,12 +1202,15 @@ levels:
     layers:
       robot-map_L5:
         color: [1, 0, 0, 0.5]
+        features:
+          - {id: "{27cfa58e-7ff3-4386-95e9-13b557b7621d}", name: "", x: 910.288, y: 2223.71}
+          - {id: "{e46bf8e4-5126-42e6-835a-08af8cd5d87c}", name: "", x: 240.363, y: 423.787}
         filename: trl_pgm/trl_l5_caato2.png
         transform:
-          scale: 0.0515
-          translation_x: -6.1
-          translation_y: 0.7
-          yaw: 0
+          scale: 0.05189006610813104
+          translation_x: -6.882946430573839
+          translation_y: 0.3122013469055515
+          yaw: 0.00878131158626989
         visible: true
     measurements:
       - [86, 87, {distance: [3, 26.8]}]
@@ -1389,6 +1423,10 @@ levels:
       - [100, 101, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
       - [101, 98, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
   TRL_L6:
+    constraints:
+      - {ids: ["{3cfd86a0-4a39-4254-9630-dcef43b2287d}", "{563bd5bf-8104-420d-973e-9dc38dd8959f}"]}
+      - {ids: ["{cc0d3540-2351-4714-92f5-aebf959edf90}", "{27293141-2584-46aa-a34c-114991c081e4}"]}
+      - {ids: ["{19b40d72-3baa-4502-b201-1419ed0d132e}", "{3ce827c7-c0a9-4223-b3b9-85add6eae791}"]}
     doors:
       - [46, 45, {motion_axis: [1, start], motion_degrees: [3, 90], motion_direction: [2, -1], name: [1, corridor_L6_door], plugin: [1, normal], right_left_ratio: [3, 1], type: [1, double_hinged]}]
       - [44, 43, {motion_axis: [1, start], motion_degrees: [3, 90], motion_direction: [2, -1], name: [1, firefighting_L6_door], plugin: [1, normal], right_left_ratio: [3, 1], type: [1, double_hinged]}]
@@ -1398,6 +1436,10 @@ levels:
     drawing:
       filename: trl_floor_plans/non-anotated/6th fl main.png
     elevation: 60
+    features:
+      - {id: "{3cfd86a0-4a39-4254-9630-dcef43b2287d}", name: "", x: 237.68, y: 454.285}
+      - {id: "{27293141-2584-46aa-a34c-114991c081e4}", name: "", x: 150.12, y: 1169.856}
+      - {id: "{3ce827c7-c0a9-4223-b3b9-85add6eae791}", name: "", x: 112.343, y: 1219.074}
     fiducials:
       - [180.858, 1135.464, servicelift_fl]
       - [224.038, 1169.582, servicelift_br]
@@ -1422,12 +1464,16 @@ levels:
     layers:
       robot-map_L6:
         color: [1, 0, 0, 0.5]
+        features:
+          - {id: "{563bd5bf-8104-420d-973e-9dc38dd8959f}", name: "", x: 444.133, y: 614.78}
+          - {id: "{cc0d3540-2351-4714-92f5-aebf959edf90}", name: "", x: 267.364, y: 1881.71}
+          - {id: "{19b40d72-3baa-4502-b201-1419ed0d132e}", name: "", x: 211.114, y: 1949.605}
         filename: trl_pgm/trl_l6_caato2.png
         transform:
-          scale: 0.0525
-          translation_x: -1
-          translation_y: 9.800000000000001
-          yaw: 0
+          scale: 0.0525097272587968
+          translation_x: -1.792371529463127
+          translation_y: 9.973896753893898
+          yaw: 0.01348541176008523
         visible: true
     measurements:
       - [51, 52, {distance: [3, 19.55]}]
@@ -1573,133 +1619,6 @@ levels:
       - [78, 79, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
       - [79, 80, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
       - [81, 82, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
-  TRL_test:
-    drawing:
-      filename: trl_floor_plans/non-anotated/4th Floor Combined.png
-    elevation: 75
-    fiducials:
-      - [232.208, 1280.877, servicelift_fl]
-      - [281.827, 1318.953, servicelift_br]
-    floors:
-      - parameters: {ceiling_scale: [3, 1], ceiling_texture: [1, blue_linoleum], indoor: [2, 0], texture_name: [1, blue_linoleum], texture_rotation: [3, 0], texture_scale: [3, 1]}
-        vertices: [6, 7, 4, 5]
-      - parameters: {ceiling_scale: [3, 1], ceiling_texture: [1, blue_linoleum], indoor: [2, 0], texture_name: [1, blue_linoleum], texture_rotation: [3, 0], texture_scale: [3, 1]}
-        vertices: [13, 14, 15, 16]
-    lanes:
-      - [8, 9, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
-      - [9, 10, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
-      - [12, 8, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
-    layers:
-      {}
-    measurements:
-      - [0, 1, {distance: [3, 41.1]}]
-      - [2, 3, {distance: [3, 12.6]}]
-    vertices:
-      - [100.281, 383.28, 0, ""]
-      - [100.56, 909.732, 0, ""]
-      - [325.349, 911.749, 0, ""]
-      - [323.756, 1083.401, 0, ""]
-      - [331.413, 1321.035, 0, ""]
-      - [330.782, 1228.644, 0, ""]
-      - [196.294, 1227.54, 0, ""]
-      - [197.24, 1320.878, 0, ""]
-      - [245.874, 1254.724, 0, test_robot_spawn, {is_charger: [4, true], is_holding_point: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, cleanerBotE_test], spawn_robot_type: [1, CleanerBotE]}]
-      - [272.621, 1241.931, 0, test_zone_start]
-      - [305.994, 1254.724, 0, test_zone, {dock_name: [1, test_zone], is_cleaning_zone: [4, true]}]
-      - [287.343, 1273.417, 0, ""]
-      - [257.17, 1299.723, 0, "", {lift_cabin: [1, service_lift]}]
-      - [74.057, 5.087, 0, ""]
-      - [198.355, 952.572, 0, ""]
-      - [387.996, 402.943, 0, ""]
-      - [423.377, 6.607, 0, ""]
-      - [175.135, 45.517, 0, ""]
-    walls:
-      - [4, 5, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
-      - [5, 6, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
-      - [6, 7, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
-      - [7, 4, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
-      - [13, 14, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
-      - [14, 15, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
-      - [15, 16, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
-      - [16, 13, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
-  TRL_test2:
-    drawing:
-      filename: trl_floor_plans/non-anotated/4th Floor Combined.png
-    elevation: 90
-    fiducials:
-      - [131.385, 53.538, servicelift_fl]
-      - [167.915, 80.625, servicelift_br]
-    floors:
-      - parameters: {ceiling_scale: [3, 1], ceiling_texture: [1, blue_linoleum], indoor: [2, 0], texture_name: [1, blue_linoleum], texture_rotation: [3, 0], texture_scale: [3, 1]}
-        vertices: [4, 5, 6, 7]
-    lanes:
-      - [8, 9, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
-      - [9, 10, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
-      - [10, 11, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
-    layers:
-      level2:
-        color: [1, 0, 0, 0.5]
-        filename: trl_floor_plans/non-anotated/2nd fl main.png
-        transform:
-          scale: 0.1092
-          translation_x: 6.3
-          translation_y: 109
-          yaw: 0
-        visible: false
-    vertices:
-      - [98.483, 383.025, 0, ""]
-      - [100.212, 910.472, 0, ""]
-      - [296.203, 909.319, 0, ""]
-      - [297.356, 1086.864, 0, ""]
-      - [86.337, 4.108, 0, ""]
-      - [72.85899999999999, 342.937, 0, ""]
-      - [504.094, 313.451, 0, ""]
-      - [267.583, 3.373, 0, ""]
-      - [149.761, 66.94199999999999, 0, "", {lift_cabin: [1, service_lift]}]
-      - [152.22, 21.805, 0, test2_robot_spawn, {is_charger: [4, true], is_holding_point: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, cleanerBotE_test2], spawn_robot_type: [1, CleanerBotE]}]
-      - [177.281, 19.487, 0, test2_zone_start]
-      - [247.971, 30.702, 0, test2_zone, {dock_name: [1, test2_zone], is_cleaning_zone: [4, true]}]
-      - [216.343, 49.225, 0, ""]
-    walls:
-      - [4, 5, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
-      - [5, 6, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
-      - [6, 7, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
-      - [7, 4, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
-  TRL_test3:
-    drawing:
-      filename: trl_floor_plans/non-anotated/4th Floor Combined.png
-    elevation: 105
-    fiducials:
-      - [223.187, 1272.735, servicelift_fl]
-      - [286.826, 1323.738, servicelift_br]
-    floors:
-      - parameters: {ceiling_scale: [3, 1], ceiling_texture: [1, blue_linoleum], indoor: [2, 0], texture_name: [1, blue_linoleum], texture_rotation: [3, 0], texture_scale: [3, 1]}
-        vertices: [0, 1, 2, 3]
-    lanes:
-      - [7, 8, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
-      - [8, 9, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
-      - [9, 10, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
-    layers:
-      {}
-    vertices:
-      - [105.242, 12.983, 0, ""]
-      - [213.327, 1379.696, 0, ""]
-      - [425.435, 1351.692, 0, ""]
-      - [178.723, 14.36, 0, ""]
-      - [214.085, 80.952, 0, ""]
-      - [214.239, 120.295, 0, ""]
-      - [257.408, 165.149, 0, ""]
-      - [257.193, 1300.202, 0, "", {lift_cabin: [1, service_lift]}]
-      - [234.508, 1193.271, 0, test3_robot_spawn, {is_charger: [4, true], is_cleaning_zone: [4, false], is_holding_point: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, cleanerBotE_test3], spawn_robot_type: [1, CleanerBotE]}]
-      - [259.427, 1190.597, 0, test3_zone_start]
-      - [314.458, 1210.385, 0, test3_zone, {dock_name: [1, test3_zone], is_cleaning_zone: [4, true]}]
-      - [127.96, 35.557, 0, ""]
-      - [284.484, 1225.957, 0, ""]
-    walls:
-      - [0, 1, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
-      - [1, 2, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
-      - [2, 3, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
-      - [3, 0, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
 lifts:
   service_lift:
     depth: 2.6
@@ -1710,7 +1629,7 @@ lifts:
         width: 2
         x: 0
         y: 1
-    highest_floor: TRL_test3
+    highest_floor: TRL_L6
     initial_floor_name: TRL_L2
     level_doors:
       TRL_L2: [service_lift_door]
@@ -1718,9 +1637,6 @@ lifts:
       TRL_L4: [service_lift_door]
       TRL_L5: [service_lift_door]
       TRL_L6: [service_lift_door]
-      TRL_test: [service_lift_door]
-      TRL_test2: [service_lift_door]
-      TRL_test3: [service_lift_door]
     lowest_floor: TRL_L2
     plugins: true
     reference_floor_name: TRL_L2

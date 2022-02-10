@@ -1,118 +1,46 @@
-# This docking config file provides the mock docker a series of known paths which
-# the cleaner robot will follow during a docking (aka cleaning) process. 
-#   Example:  Destination: "CLEANZONE" ;  The path here is the trajactory 
-#             which starts from "CLEANZONE_start" to "CLEANZONE"
-
-
-#coordinates must be float
-#tabs not allowed, only spaces for the yaml parser to work
-
 cleanerBotA:
-  L2_zoneA: #works but coordinates not filled completely
-    level_name: "TRL_L2"
-    path: [ [39.50, -29.11, 0.0],
-            [39.78, -32.22, 0.0],
-            [36.24, -33.92, 0.0],
-            [36.29, -30.58, 0.0],
-            [38.35, -30.28, 0.0] ]
-    finish_waypoint: "L2_zoneA"
-  L2_zoneB: #works but coordinates not filled completely
-    level_name: "TRL_L2"
-    path: [ [84.08, -25.63, 0.0],
-            [82.5, -23.24, 0.0],
-            [85.41, -22.18, 0.0],
-            [85.48, -24.61, 0.0] ]
-    finish_waypoint: "L2_zoneB"
-
-  L2_zoneC: #works but coordinates not filled completely
-    level_name: "TRL_L2"
-    path: [ [120.1, -28.96, 0.0],
-            [123.3, -29.94, 0.0],
-            [120.0, -29.97, 0.0] ]
-    finish_waypoint: "L2_zoneB"
-
-  L3_zoneA: #works but coordinates not filled completely
-    level_name: "TRL_L3"
-    path: [ [35.50, -28.43, 0.0],
-            [36.85, -30.04, 0.0],
-            [34.64, -29.36, 0.0] ]
-    finish_waypoint: "L3_zoneA"
-
-  L4_zoneC: #not working
-    level_name: "TRL_L4"
-    path: [ [30.62, -124.9, 0.0],
-            [33.68, -124.8, 0.0],
-            [30.62, -126.8, 0.0] ]
-    finish_waypoint: "L4_zoneC"
-
-
-cleanerBotE:
-  L4_zoneA: #not working
-    level_name: "TRL_L4"
-    path: [ [16.23, -24.27, 0.0],
-            [15.95, -22.11, 0.0],
-            [14.15, -22.27, 0.0],
-            [15.01, -23.66, 0.0] ]
-    finish_waypoint: "L4_zoneA"
-
-  L4_zoneB: #not working
-    level_name: "TRL_L4"
-    path: [ [6.473, -40.25, 0.0],
-            [9.679, -40.1, 0.0],
-            [9.402, -43.13, 0.0],
-            [7.873, -44.23, 0.0] ]
-    finish_waypoint: "L4_zoneB"
-    
-  L5_zoneA: #not working
-    level_name: "TRL_L5"
-    path: [ [16.89, -112.0, 0.0],
-            [17.22, -114.3, 0.0],
-            [15.68, -112.8, 0.0] ]
-    finish_waypoint: "L5_zoneA"
-
-  L5_test:
-    level_name: "TRL_L5"
-    path: [ [13.24, -99.04, 0.0],
-            [15.34, -98.55, 0.0],
-            [14.16, -99.96, 0.0] ]
-    finish_waypoint: "L5_test"
-
+  L2_zoneA:
+    level_name: TRL_L2
+    path: [[39.482, -29.097, 0.0], [39.768, -32.208, 0.0], [36.226, -33.91, 0.0], [36.281, -30.57, 0.0], [38.333, -30.266, 0.0]]
+  L2_zoneB:
+    level_name: TRL_L2
+    path: [[84.056, -25.616, 0.0], [84.1, -20.412, 0.0], [91.945, -21.24, 0.0], [85.454, -24.604, 0.0]]
+  L2_zoneC:
+    level_name: TRL_L2
+    path: [[120.032, -28.951, 0.0], [119.966, -29.96, 0.0]]
+  L3_zoneA:
+    level_name: TRL_L3
+    path: [[34.555, -28.176, 0.0], [33.693, -29.106, 0.0]]
+  L3_zoneB:
+    level_name: TRL_L3
+    path: []
+  L3_zoneC:
+    level_name: TRL_L3
+    path: []
+  L4_zoneA:
+    level_name: TRL_L4
+    path: [[11.795, 73.257, 0.0], [10.57, 73.872, 0.0]]
+  L4_zoneB:
+    level_name: TRL_L4
+    path: [[2.033, 57.275, 0.0], [3.433, 53.301, 0.0]]
+  L4_zoneC:
+    level_name: TRL_L4
+    path: [[26.187, -27.36, 0.0], [29.248, -27.333, 0.0], [26.187, -29.33, 0.0]]
+  L5_zoneA:
+    level_name: TRL_L5
+    path: []
+  L5_zoneB:
+    level_name: TRL_L5
+    path: []
+  L5_zoneC:
+    level_name: TRL_L5
+    path: []
+  L6_zoneA:
+    level_name: TRL_L6
+    path: []
   L6_zoneB:
-    level_name: "TRL_L6"
-    path: [ [18.78, -55.43, 0.0],
-            [17.35, -53.51, 0.0],
-            [16.69, -55.95, 0.0] ]
-    finish_waypoint: "L6_zoneB"
-
-
-  L3_zoneX: #works
-    level_name: "TRL_L3"
-    path: [ [92.32, -28.38, 0.0],
-            [90.97, -29.51, 0.0],
-            [91.97, -30.23, 0.0] ]
-    finish_waypoint: "L3_zoneX"
-
-  test_zone: #not working
-    level_name: "TRL_test"
-    path: [ [21.83, -99.45, 0.0],
-            [23.01, -102.00, 0.0],
-            [24.5, -100.5, 0.0] ]
-    finish_waypoint: "test_zone"
-
-  test2_zone: 
-    level_name: "TRL_test2"
-    path: [ [19.52, -2.146, 0.0],
-            [23.83, -5.421, 0.0],
-            [27.31, -3.381, 0.0] ]
-    finish_waypoint: "test2_zone"
-
-  test3_zone: #working
-    level_name: "TRL_test3"
-    path: [ [20.42, -93.72, 0.0],
-            [22.39, -96.51, 0.0],
-            [24.75, -95.28, 0.0] ]
-    finish_waypoint: "test3_zone"
-
-
-
- 
+    level_name: TRL_L6
+    path: []
+  L6_zoneC:
+    level_name: TRL_L6
+    path: []
