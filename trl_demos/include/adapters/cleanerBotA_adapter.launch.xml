@@ -50,6 +50,8 @@
       <arg name="perform_loop" value="false"/>
       <!-- Whether it can perform cleaning -->
       <arg name="perform_cleaning" value="true"/>
+      <!-- Whether it can perform bookshelf -->
+      <arg name="perform_bookshelf" value="true"/>
       <!-- What the robot should do once it finishes its tasks -->
       <arg name="finishing_request" value="charge"/>
 

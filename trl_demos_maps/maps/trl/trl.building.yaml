@@ -1,7 +1,7 @@
 coordinate_system: reference_image
 crowd_sim:
   agent_groups:
-    - {agents_name: [cleanerBotA_2X, cleanerBotA_2A, cleanerBotA_2B, cleanerBotA_2C, cleanerBotA_3A, cleanerBotA_3C, cleanerBotA_4A, cleanerBotA_4B, cleanerBotA_4C, cleanerBotA_5B, cleanerBotA_5C, cleanerBotA_5A, tinyRobot1, tinyRobot0, cleanerBotA_6A, cleanerBotA_6A], agents_number: 16, group_id: 0, profile_selector: external_agent, state_selector: external_static, x: 0, y: 0}
+    - {agents_name: [cleanerBotA_2X, cleanerBotA_2A, cleanerBotA_2B, cleanerBotA_2C, cleanerBotA_3A, cleanerBotA_3C, cleanerBotA_4A, cleanerBotA_4B, cleanerBotA_4C, cleanerBotA_5B, cleanerBotA_5C, cleanerBotA_5A, tinyRobot1, tinyRobot0, cleanerBotA_6B, cleanerBotA_6A], agents_number: 16, group_id: 0, profile_selector: external_agent, state_selector: external_static, x: 0, y: 0}
   agent_profiles:
     - {ORCA_tau: 1, ORCA_tauObst: 0.4, class: 1, max_accel: 0, max_angle_vel: 0, max_neighbors: 10, max_speed: 0, name: external_agent, neighbor_dist: 5, obstacle_set: 1, pref_speed: 0, r: 0.25}
   enable: 0
@@ -269,9 +269,9 @@ levels:
       - [769.7430000000001, 234.582, 0, L2_zoneB_start]
       - [782.549, 225.315, 0, L2_zoneB, {dock_name: [1, L2_zoneB], is_cleaning_zone: [4, true]}]
       - [1107.496, 260.98, 0, L2_zoneC_start]
-      - [1089.458, 270.407, 0, L2_zoneC, {dock_name: [1, L2_zoneC], is_cleaning_zone: [4, true]}]
+      - [1089.458, 270.407, 0, L2_zoneC, {dock_name: [1, L2_zoneC], is_bookshelf_zone: [4, true], is_cleaning_zone: [4, false]}]
       - [361.553, 266.452, 0, L2_zoneA_start]
-      - [351.098, 274.18, 0, L2_zoneA, {dock_name: [1, L2_zoneA], is_cleaning_zone: [4, true]}]
+      - [351.098, 274.18, 0, L2_zoneA, {dock_name: [1, L2_zoneA], is_bookshelf_zone: [4, true], is_cleaning_zone: [4, false]}]
       - [511.777, 281.726, 0, L2_zoneA_clean_2]
       - [480.899, 275.287, 0, L2_zoneA_clean_1]
       - [412.851, 275.433, 0, L2_zoneA_clean_0]
