@@ -2,7 +2,7 @@
 
 <launch>
 
-  <arg name="fleet_name" default="cleanerBotA" description="Name of this fleet of CleanerBotA robots"/>
+  <arg name="fleet_name" default="lionsBot" description="Name of this fleet of lionsBot robots"/>
   <arg name="use_sim_time" default="false" description="Use the /clock topic for time to sync with simulation"/>
   <arg name="nav_graph_file" description="Nav graph required by fleet adapter"/>
 

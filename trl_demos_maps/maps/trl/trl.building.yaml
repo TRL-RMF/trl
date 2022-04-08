@@ -1,7 +1,6 @@
-coordinate_system: reference_image
 crowd_sim:
   agent_groups:
-    - {agents_name: [cleanerBotA_2X, cleanerBotA_2A, cleanerBotA_2B, cleanerBotA_2C, cleanerBotA_3A, cleanerBotA_3C, cleanerBotA_4A, cleanerBotA_4B, cleanerBotA_4C, cleanerBotA_5B, cleanerBotA_5C, cleanerBotA_5A, tinyRobot1, tinyRobot0, cleanerBotA_6A, cleanerBotA_6A], agents_number: 16, group_id: 0, profile_selector: external_agent, state_selector: external_static, x: 0, y: 0}
+    - {agents_name: [cleanerBotA_2X, cleanerBotA_2A, cleanerBotA_2B, cleanerBotA_2C, cleanerBotA_3A, cleanerBotA_3C, cleanerBotA_4A, cleanerBotA_4B, cleanerBotA_4C, cleanerBotA_5B, cleanerBotA_5C, cleanerBotA_5A, tinyRobot1, "", cleanerBotA_6B, cleanerBotA_6A], agents_number: 16, group_id: 0, profile_selector: external_agent, state_selector: external_static, x: 0, y: 0}
   agent_profiles:
     - {ORCA_tau: 1, ORCA_tauObst: 0.4, class: 1, max_accel: 0, max_angle_vel: 0, max_neighbors: 10, max_speed: 0, name: external_agent, neighbor_dist: 5, obstacle_set: 1, pref_speed: 0, r: 0.25}
   enable: 0
@@ -53,6 +52,8 @@ levels:
       - [168.038, 80.643, servicelift_br]
       - [205.372, 247.445, escalator_b]
       - [86.563, 169.492, ""]
+    flattened_x_offset: 0
+    flattened_y_offset: 0
     floors:
       - parameters: {ceiling_scale: [3, 1], ceiling_texture: [1, blue_linoleum], indoor: [2, 0], texture_name: [1, blue_linoleum], texture_rotation: [3, 0], texture_scale: [3, 1]}
         vertices: [104, 105, 106, 97, 96, 0, 1, 2, 54, 53, 52, 47, 26, 23, 22, 21, 19, 18, 17, 16, 15, 14, 13, 94, 93, 92, 89, 88, 87, 84, 83, 70, 69, 68, 65, 64, 63, 62, 61, 11, 10, 9, 8]
@@ -61,7 +62,6 @@ levels:
     lanes:
       - [119, 120, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [120, 121, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
-      - [121, 122, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [122, 123, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [123, 124, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [125, 126, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
@@ -70,7 +70,6 @@ levels:
       - [129, 130, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [130, 131, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [132, 133, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
-      - [121, 134, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [134, 135, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [135, 124, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [143, 144, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
@@ -87,6 +86,16 @@ levels:
       - [131, 155, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [155, 145, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [145, 132, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [120, 197, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [121, 198, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
+      - [121, 199, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
+      - [121, 200, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
+      - [121, 201, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
+      - [201, 202, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
+      - [201, 134, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
+      - [121, 203, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
+      - [203, 204, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
+      - [203, 122, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
     layers:
       robot-map_L2:
         color: [1, 0, 0, 0.5]
@@ -222,8 +231,8 @@ levels:
       - [105.871, 23.901, 0, ""]
       - [173.219, 23.556, 0, ""]
       - [131.256, 41.17, 0, ""]
-      - [179.09, 43.933, 0, ""]
-      - [179.09, 23.901, 0, ""]
+      - [190.142, 46.135, 0, ""]
+      - [189.502, 23.798, 0, ""]
       - [1278.264, 165.282, 0, ""]
       - [178.24, 52.248, 0, ""]
       - [178.789, 80.39400000000001, 0, ""]
@@ -237,15 +246,15 @@ levels:
       - [470.574, 241.096, 0, ""]
       - [131.264, 51.126, 0, ""]
       - [138.352, 51.041, 0, ""]
-      - [160.883, 43.869, 0, ""]
+      - [161.119, 45.495, 0, ""]
       - [131.693, 81.178, 0, ""]
       - [161.093, 51.711, 0, ""]
       - [168.072, 51.894, 0, ""]
       - [168.173, 80.976, 0, ""]
-      - [147.689, 34.889, 0, L2_liftlobby]
+      - [145.326, 34.895, 0, L2_liftlobby]
       - [80.92400000000001, 34.427, 0, ""]
-      - [84.34, 102.752, 0, ""]
-      - [170.241, 109.777, 0, ""]
+      - [91.376, 117.462, 0, ""]
+      - [179.382, 119.169, 0, ""]
       - [236.981, 196.636, 0, ""]
       - [238.578, 266.569, 0, ""]
       - [500.75, 265.611, 0, ""]
@@ -259,7 +268,7 @@ levels:
       - [1248.946, 291.158, 0, entrance]
       - [85.887, 169.451, 0, L2_escalator]
       - [176.177, 272.51, 0, ""]
-      - [150, 66.5, 0, "", {lift_cabin: [1, service_lift]}]
+      - [150, 65.09999999999999, 0, "", {lift_cabin: [1, service_lift]}]
       - [903.568, 262.964, 0, ""]
       - [886.548, 271.548, 0, ""]
       - [887.732, 299.521, 0, ""]
@@ -269,13 +278,13 @@ levels:
       - [769.7430000000001, 234.582, 0, L2_zoneB_start]
       - [782.549, 225.315, 0, L2_zoneB, {dock_name: [1, L2_zoneB], is_cleaning_zone: [4, true]}]
       - [1107.496, 260.98, 0, L2_zoneC_start]
-      - [1089.458, 270.407, 0, L2_zoneC, {dock_name: [1, L2_zoneC], is_cleaning_zone: [4, true]}]
+      - [1089.458, 270.407, 0, L2_zoneC, {dock_name: [1, L2_zoneC], is_bookshelf_zone: [4, true], is_cleaning_zone: [4, false]}]
       - [361.553, 266.452, 0, L2_zoneA_start]
-      - [351.098, 274.18, 0, L2_zoneA, {dock_name: [1, L2_zoneA], is_cleaning_zone: [4, true]}]
+      - [351.098, 274.18, 0, L2_zoneA, {dock_name: [1, L2_zoneA], is_bookshelf_zone: [4, true], is_cleaning_zone: [4, false]}]
       - [511.777, 281.726, 0, L2_zoneA_clean_2]
       - [480.899, 275.287, 0, L2_zoneA_clean_1]
       - [412.851, 275.433, 0, L2_zoneA_clean_0]
-      - [164.998, 33.012, 0, cleanerBotA_2X_spawn, {is_charger: [4, true], is_holding_point: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, cleanerBotA_2X], spawn_robot_type: [1, CleanerBotA]}]
+      - [177.48, 35.322, 0, cleanerBotA_2X_spawn, {is_charger: [4, true], is_holding_point: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, cleanerBotA_2X], spawn_robot_type: [1, CleanerBotA]}]
       - [339.116, 266.706, 0, cleanerBotA_2A_spawn, {is_charger: [4, true], is_holding_point: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, cleanerBotA_2A], spawn_robot_type: [1, CleanerBotA]}]
       - [755.648, 234.42, 0, cleanerBotA_2B_spawn, {is_charger: [4, true], is_holding_point: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, cleanerBotA_2B], spawn_robot_type: [1, CleanerBotA]}]
       - [1078.52, 263.235, 0, cleanerBotA_2C_spawn, {is_charger: [4, true], is_holding_point: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, cleanerBotA_2C], spawn_robot_type: [1, CleanerBotA]}]
@@ -292,7 +301,7 @@ levels:
       - [223.43, 315.279, 0, L2_zoneA_clean_12]
       - [191.126, 299.794, 0, L2_zoneA_clean_13]
       - [203.266, 276.894, 0, L2_zoneA_clean_14]
-      - [289.897, 273.86, 0, L2_zoneA_clean_15]
+      - [417.269, 330.359, 0, L2_zoneA_clean_15]
       - [754.376, 218.162, 0, L2_zoneB_clean_0]
       - [729.489, 228.319, 0, L2_zoneB_clean_1]
       - [699.559, 211.285, 0, L2_zoneB_clean_2]
@@ -320,6 +329,14 @@ levels:
       - [1018.681, 311.13, 0, L2_zoneC_clean_13]
       - [986.3630000000001, 323.199, 0, L2_zoneC_clean_14]
       - [982.742, 270.631, 0, L2_zoneC_clean_15]
+      - [56.516, 41.492, 0, L2_holding, {is_parking_spot: [4, true]}]
+      - [116.081, 95.294, 0, tinyRobot_2X_spawn, {is_charger: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, tinyRobot_2X], spawn_robot_type: [1, TinyRobot]}]
+      - [57.011, 119.089, 0, tinyRobot_2Y_spawn, {is_charger: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, tinyRobot_2Y], spawn_robot_type: [1, TinyRobot]}]
+      - [114.739, 133.951, 0, standalone_1, {is_parking_spot: [4, false]}]
+      - [82.22799999999999, 145.283, 0, ""]
+      - [65.331, 148.041, 0, tinyRobot_2Z_spawn, {is_charger: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, tinyRobot_2Z], spawn_robot_type: [1, TinyRobot]}]
+      - [137.817, 113.805, 0, ""]
+      - [140.011, 101.007, 0, tinyRobot_2W_spawn, {is_charger: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, tinyRobot_2W], spawn_robot_type: [1, TinyRobot]}]
     walls:
       - [0, 1, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
       - [1, 2, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
@@ -461,6 +478,8 @@ levels:
       - [175.8, 162.373, escalator_a]
       - [210.488, 99.396, servicelift_br]
       - [256.341, 297.53, escalator_b]
+    flattened_x_offset: 0
+    flattened_y_offset: 0
     floors:
       - parameters: {ceiling_scale: [3, 1], ceiling_texture: [1, blue_linoleum], indoor: [2, 0], texture_name: [1, blue_linoleum], texture_rotation: [3, 0], texture_scale: [3, 1]}
         vertices: [29, 1, 2, 3, 4, 36, 33, 34, 31, 30]
@@ -517,7 +536,7 @@ levels:
       - {model_name: OpenRobotics/LitterBin, name: OpenRobotics/LitterBin, static: true, x: 318.848, y: 251.762, yaw: 1.5708, z: 0}
       - {model_name: OpenRobotics/LitterBin, name: OpenRobotics/LitterBin, static: true, x: 49.61, y: 99.43300000000001, yaw: 1.5708, z: 0}
     vertices:
-      - [189.236, 81.997, 0, "", {lift_cabin: [1, service_lift]}]
+      - [189.236, 80.325, 0, "", {lift_cabin: [1, service_lift]}]
       - [253.608, 20.779, 0, ""]
       - [171.276, 19.85, 0, ""]
       - [171.276, 30.374, 0, ""]
@@ -875,6 +894,8 @@ levels:
       - [282.365, 1320.313, servicelift_br]
       - [243.79, 1390.525, escalator_a]
       - [335.077, 1545.343, escalator_b]
+    flattened_x_offset: 0
+    flattened_y_offset: 0
     floors:
       - parameters: {ceiling_scale: [3, 1], ceiling_texture: [1, blue_linoleum], indoor: [2, 0], texture_name: [1, blue_linoleum], texture_rotation: [3, 0], texture_scale: [3, 1]}
         vertices: [0, 1, 2, 101, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 120, 31, 30, 33, 34, 102, 35, 36, 37, 38, 46, 45, 59, 58, 57, 54, 53, 93]
@@ -1089,7 +1110,7 @@ levels:
       - [417.712, 1492.696, 0, ""]
       - [516.587, 1493.715, 0, ""]
       - [516.332, 1540.349, 0, ""]
-      - [258.438, 1300.203, 0, "", {lift_cabin: [1, service_lift]}]
+      - [258.438, 1298.305, 0, "", {lift_cabin: [1, service_lift]}]
       - [197.885, 274.322, 0, L4_zoneA_clean_6]
       - [140.223, 178.171, 0, L4_zoneA_clean_2]
       - [161.676, 230.529, 0, L4_zoneA_clean_1]
@@ -1330,6 +1351,8 @@ levels:
       - [187.227, 883.913, servicelift_br]
       - [158.266, 936.072, escalator_a]
       - [225.647, 1047.992, escalator_b]
+    flattened_x_offset: 0
+    flattened_y_offset: 0
     floors:
       - parameters: {ceiling_scale: [3, 1], ceiling_texture: [1, blue_linoleum], indoor: [2, 0], texture_name: [1, blue_linoleum], texture_rotation: [3, 0], texture_scale: [3, 1]}
         vertices: [2, 3, 4, 5, 6, 7, 8, 82, 9, 10, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 28, 1]
@@ -1379,7 +1402,7 @@ levels:
       - {model_name: OpenRobotics/LitterBin, name: OpenRobotics/LitterBin, static: true, x: 532.306, y: 1124.09, yaw: 1.5708, z: 0}
       - {model_name: OpenRobotics/LitterBin, name: OpenRobotics/LitterBin, static: true, x: 617.293, y: 1123.368, yaw: 1.5708, z: 0}
     vertices:
-      - [169.458, 868.954, 0, "", {lift_cabin: [1, service_lift]}]
+      - [169.458, 867.5599999999999, 0, "", {lift_cabin: [1, service_lift]}]
       - [128.894, 22.119, 0, ""]
       - [33.157, 15.62, 0, ""]
       - [30.657, 62.114, 0, ""]
@@ -1728,6 +1751,8 @@ levels:
       - [180.858, 1135.464, servicelift_fl]
       - [224.038, 1169.582, servicelift_br]
       - [190.054, 1231.153, escalator_a]
+    flattened_x_offset: 0
+    flattened_y_offset: 0
     floors:
       - parameters: {ceiling_scale: [3, 1], ceiling_texture: [1, blue_linoleum], indoor: [2, 0], texture_name: [1, blue_linoleum], texture_rotation: [3, 0], texture_scale: [3, 1]}
         vertices: [1, 2, 3, 4, 5, 6, 7, 10, 11, 12, 13, 14, 17, 18, 26, 39, 40, 41, 42]
@@ -1768,7 +1793,7 @@ levels:
     models:
       - {model_name: OpenRobotics/Bookshelf, name: OpenRobotics/Bookshelf, static: true, x: 111.268, y: 1106.203, yaw: 1.5708, z: 0}
     vertices:
-      - [202.686, 1152.158, 0, "", {lift_cabin: [1, service_lift]}]
+      - [202.686, 1150.502, 0, "", {lift_cabin: [1, service_lift]}]
       - [195.591, 4.032, 0, ""]
       - [48.115, 4.032, 0, ""]
       - [39.069, 128.756, 0, ""]
@@ -1783,7 +1808,7 @@ levels:
       - [81.471, 885.516, 0, ""]
       - [112.015, 1219.218, 0, ""]
       - [205.438, 1314.717, 0, ""]
-      - [186.263, 1217.163, 0, ""]
+      - [190.48, 1231.372, 0, ""]
       - [276.68, 1314.565, 0, ""]
       - [285.8, 1314.177, 0, ""]
       - [246.994, 1272.461, 0, ""]
@@ -1826,7 +1851,7 @@ levels:
       - [200.399, 1117.74, 0, service-lift_holding_L6, {is_holding_point: [4, true], is_parking_spot: [4, true]}]
       - [126.224, 1116.645, 0, central-corridor_l6]
       - [127.867, 1188.357, 0, tinyRobot1_charger, {is_charger: [4, true], is_holding_point: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, tinyRobot1], spawn_robot_type: [1, TinyRobot]}]
-      - [199.852, 1213.538, 0, tinyRobot0_charger, {is_charger: [4, true], is_holding_point: [4, true], spawn_robot_name: [1, tinyRobot0], spawn_robot_type: [1, TinyRobot]}]
+      - [199.852, 1213.538, 0, tinyRobot0_charger, {is_charger: [4, false], is_holding_point: [4, true], spawn_robot_name: [1, ""], spawn_robot_type: [1, ""]}]
       - [125.96, 788.2329999999999, 0, cleanerBotA_6B_spawn, {is_charger: [4, true], is_holding_point: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, cleanerBotA_6B], spawn_robot_type: [1, CleanerBotA]}]
       - [225.543, 782.718, 0, ""]
       - [227.093, 673.877, 0, ""]
@@ -2067,6 +2092,6 @@ lifts:
     reference_floor_name: TRL_L2
     width: 3.7
     x: 150
-    y: 66.5
-    yaw: 0
+    y: 65.09999999999999
+    yaw: 0.01
 name: trl
