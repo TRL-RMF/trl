@@ -19,4 +19,5 @@
     <arg name="gazebo_version" value="$(var gazebo_version)" />
   </include>
 
+  <node pkg="trl_demos_gz" exec="gazebo_step.sh" name="increase_gazebo_step_size"/>
 </launch>

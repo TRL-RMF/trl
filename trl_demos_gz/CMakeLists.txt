@@ -8,5 +8,9 @@ install(DIRECTORY
   launch/
   DESTINATION share/${PROJECT_NAME}
 )
+install(PROGRAMS
+  scripts/gazebo_step.sh
+  DESTINATION lib/${PROJECT_NAME}
+)
 
 ament_package()

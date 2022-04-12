@@ -1,6 +1,6 @@
 crowd_sim:
   agent_groups:
-    - {agents_name: [cleanerBotA_2X, cleanerBotA_2A, cleanerBotA_2B, cleanerBotA_2C, cleanerBotA_3A, cleanerBotA_3C, cleanerBotA_4A, cleanerBotA_4B, cleanerBotA_4C, cleanerBotA_5B, cleanerBotA_5C, cleanerBotA_5A, tinyRobot1, "", cleanerBotA_6B, cleanerBotA_6A], agents_number: 16, group_id: 0, profile_selector: external_agent, state_selector: external_static, x: 0, y: 0}
+    - {agents_name: [tinyRobot_2T, cleanerBotA_2A, cleanerBotA_2B, cleanerBotA_2C, tinyRobot_2X, tinyRobot_2Y, tinyRobot_2Z, tinyRobot_2W, tinyRobot_2V, tinyRobot_2U, cleanerBotA_3A, cleanerBotA_3C, tinyRobot_3X, cleanerBotA_4A, cleanerBotA_4B, cleanerBotA_4C, tinyRobot_4X, cleanerBotA_5B, cleanerBotA_5C, cleanerBotA_5A, tinyRobot_5X, tinyRobot1, "", cleanerBotA_6B, cleanerBotA_6A, tinyRobot_6X], agents_number: 26, group_id: 0, profile_selector: external_agent, state_selector: external_static, x: 0, y: 0}
   agent_profiles:
     - {ORCA_tau: 1, ORCA_tauObst: 0.4, class: 1, max_accel: 0, max_angle_vel: 0, max_neighbors: 10, max_speed: 0, name: external_agent, neighbor_dist: 5, obstacle_set: 1, pref_speed: 0, r: 0.25}
   enable: 0
@@ -24,7 +24,6 @@ levels:
       - {ids: ["{ddc18a9e-2efb-4cd9-a395-2bd67fb4f9a4}", "{3ccb0204-025f-4631-9984-c5050d1e54ec}"]}
       - {ids: ["{816ce738-2683-4b5c-b464-f41a53fba70d}", "{eb97f49f-21c8-46ff-a74c-4675cbfb657d}"]}
     doors:
-      - [96, 95, {motion_axis: [1, start], motion_degrees: [3, 90], motion_direction: [2, -1], name: [1, service-lobby_L2_door], plugin: [1, normal], right_left_ratio: [3, 1], type: [1, double_hinged]}]
       - [56, 51, {motion_axis: [1, end], motion_degrees: [3, 90], motion_direction: [2, -1], name: [1, store1_L2_door], plugin: [1, normal], right_left_ratio: [3, 1], type: [1, hinged]}]
       - [59, 60, {motion_axis: [1, end], motion_degrees: [3, 90], motion_direction: [2, -1], name: [1, gallery1_L2_door], plugin: [1, normal], right_left_ratio: [3, 1], type: [1, hinged]}]
       - [57, 48, {motion_axis: [1, end], motion_degrees: [3, 90], motion_direction: [2, 1], name: [1, gallery2_L2_door], plugin: [1, normal], right_left_ratio: [3, 1], type: [1, hinged]}]
@@ -34,6 +33,7 @@ levels:
       - [33, 32, {motion_axis: [1, start], motion_degrees: [3, 90], motion_direction: [2, -1], name: [1, interest3_L2_door], plugin: [1, normal], right_left_ratio: [3, 1], type: [1, double_hinged]}]
       - [86, 87, {motion_axis: [1, start], motion_degrees: [3, 90], motion_direction: [2, -1], name: [1, firefighting_L2_door], plugin: [1, normal], right_left_ratio: [3, 1], type: [1, double_hinged]}]
       - [90, 91, {motion_axis: [1, start], motion_degrees: [3, 90], motion_direction: [2, -1], name: [1, store2_L2_door], plugin: [1, normal], right_left_ratio: [3, 1], type: [1, hinged]}]
+      - [96, 95, {motion_axis: [1, start], motion_degrees: [3, 90], motion_direction: [2, -1], name: [1, service-lobby_L2_door], plugin: [1, normal], right_left_ratio: [3, 1], type: [1, double_hinged]}]
     drawing:
       filename: trl_floor_plans/non-anotated/2nd fl main.png
     elevation: 0
@@ -56,12 +56,14 @@ levels:
     flattened_y_offset: 0
     floors:
       - parameters: {ceiling_scale: [3, 1], ceiling_texture: [1, blue_linoleum], indoor: [2, 0], texture_name: [1, blue_linoleum], texture_rotation: [3, 0], texture_scale: [3, 1]}
-        vertices: [104, 105, 106, 97, 96, 0, 1, 2, 54, 53, 52, 47, 26, 23, 22, 21, 19, 18, 17, 16, 15, 14, 13, 94, 93, 92, 89, 88, 87, 84, 83, 70, 69, 68, 65, 64, 63, 62, 61, 11, 10, 9, 8]
-      - parameters: {ceiling_scale: [3, 1], ceiling_texture: [1, blue_linoleum], indoor: [2, 0], texture_name: [1, blue_linoleum], texture_rotation: [3, 0], texture_scale: [3, 1]}
         vertices: [110, 111, 65, 64, 63, 62, 61, 11]
+      - parameters: {ceiling_scale: [3, 1], ceiling_texture: [1, blue_linoleum], indoor: [2, 0], texture_name: [1, blue_linoleum], texture_rotation: [3, 0], texture_scale: [3, 1]}
+        vertices: [116, 114, 99, 100, 96, 95, 98, 112, 113]
+      - parameters: {ceiling_scale: [3, 1], ceiling_texture: [1, blue_linoleum], indoor: [2, 0], texture_name: [1, blue_linoleum], texture_rotation: [3, 0], texture_scale: [3, 1]}
+        vertices: [0, 1, 2, 3, 4, 5, 6]
+      - parameters: {ceiling_scale: [3, 1], ceiling_texture: [1, blue_linoleum], indoor: [2, 0], texture_name: [1, blue_linoleum], texture_rotation: [3, 0], texture_scale: [3, 1]}
+        vertices: [0, 6, 5, 4, 3, 54, 53, 52, 27, 23, 22, 21, 19, 18, 17, 16, 15, 14, 13, 11, 10, 9, 7]
     lanes:
-      - [119, 120, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
-      - [120, 121, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [122, 123, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [123, 124, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [125, 126, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
@@ -96,6 +98,11 @@ levels:
       - [121, 203, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
       - [203, 204, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
       - [203, 122, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
+      - [120, 205, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
+      - [120, 206, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
+      - [206, 121, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
+      - [120, 207, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
+      - [207, 119, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
     layers:
       robot-map_L2:
         color: [1, 0, 0, 0.5]
@@ -227,8 +234,8 @@ levels:
       - [1182.386, 244.763, 0, ""]
       - [1223.073, 244.376, 0, ""]
       - [1221.91, 164.358, 0, ""]
-      - [106.216, 40.997, 0, ""]
-      - [105.871, 23.901, 0, ""]
+      - [106.079, 41.066, 0, ""]
+      - [106.186, 22.852, 0, ""]
       - [173.219, 23.556, 0, ""]
       - [131.256, 41.17, 0, ""]
       - [190.142, 46.135, 0, ""]
@@ -245,15 +252,15 @@ levels:
       - [469.203, 165.478, 0, ""]
       - [470.574, 241.096, 0, ""]
       - [131.264, 51.126, 0, ""]
-      - [138.352, 51.041, 0, ""]
+      - [138.563, 51.966, 0, ""]
       - [161.119, 45.495, 0, ""]
       - [131.693, 81.178, 0, ""]
       - [161.093, 51.711, 0, ""]
       - [168.072, 51.894, 0, ""]
       - [168.173, 80.976, 0, ""]
-      - [145.326, 34.895, 0, L2_liftlobby]
-      - [80.92400000000001, 34.427, 0, ""]
-      - [91.376, 117.462, 0, ""]
+      - [148.153, 32.864, 0, L2_liftlobby, {is_parking_spot: [4, true]}]
+      - [78.898, 45.186, 0, ""]
+      - [91.376, 117.462, 0, L2_junction]
       - [179.382, 119.169, 0, ""]
       - [236.981, 196.636, 0, ""]
       - [238.578, 266.569, 0, ""]
@@ -268,7 +275,7 @@ levels:
       - [1248.946, 291.158, 0, entrance]
       - [85.887, 169.451, 0, L2_escalator]
       - [176.177, 272.51, 0, ""]
-      - [150, 65.09999999999999, 0, "", {lift_cabin: [1, service_lift]}]
+      - [150, 63.9, 0, "", {lift_cabin: [1, service_lift]}]
       - [903.568, 262.964, 0, ""]
       - [886.548, 271.548, 0, ""]
       - [887.732, 299.521, 0, ""]
@@ -284,7 +291,7 @@ levels:
       - [511.777, 281.726, 0, L2_zoneA_clean_2]
       - [480.899, 275.287, 0, L2_zoneA_clean_1]
       - [412.851, 275.433, 0, L2_zoneA_clean_0]
-      - [177.48, 35.322, 0, cleanerBotA_2X_spawn, {is_charger: [4, true], is_holding_point: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, cleanerBotA_2X], spawn_robot_type: [1, CleanerBotA]}]
+      - [176.699, 33.716, 0, tinyRobot_2T_spawn, {is_charger: [4, true], is_holding_point: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, tinyRobot_2T], spawn_robot_type: [1, TinyRobot]}]
       - [339.116, 266.706, 0, cleanerBotA_2A_spawn, {is_charger: [4, true], is_holding_point: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, cleanerBotA_2A], spawn_robot_type: [1, CleanerBotA]}]
       - [755.648, 234.42, 0, cleanerBotA_2B_spawn, {is_charger: [4, true], is_holding_point: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, cleanerBotA_2B], spawn_robot_type: [1, CleanerBotA]}]
       - [1078.52, 263.235, 0, cleanerBotA_2C_spawn, {is_charger: [4, true], is_holding_point: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, cleanerBotA_2C], spawn_robot_type: [1, CleanerBotA]}]
@@ -329,14 +336,17 @@ levels:
       - [1018.681, 311.13, 0, L2_zoneC_clean_13]
       - [986.3630000000001, 323.199, 0, L2_zoneC_clean_14]
       - [982.742, 270.631, 0, L2_zoneC_clean_15]
-      - [56.516, 41.492, 0, L2_holding, {is_parking_spot: [4, true]}]
-      - [116.081, 95.294, 0, tinyRobot_2X_spawn, {is_charger: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, tinyRobot_2X], spawn_robot_type: [1, TinyRobot]}]
+      - [53.747, 45.186, 0, L2_holding, {is_holding_point: [4, true], is_parking_spot: [4, true]}]
+      - [116.228, 98.02500000000001, 0, tinyRobot_2X_spawn, {is_charger: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, tinyRobot_2X], spawn_robot_type: [1, TinyRobot]}]
       - [57.011, 119.089, 0, tinyRobot_2Y_spawn, {is_charger: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, tinyRobot_2Y], spawn_robot_type: [1, TinyRobot]}]
-      - [114.739, 133.951, 0, standalone_1, {is_parking_spot: [4, false]}]
+      - [100.23, 127.231, 0, standalone_1, {is_holding_point: [4, true], is_parking_spot: [4, true]}]
       - [82.22799999999999, 145.283, 0, ""]
       - [65.331, 148.041, 0, tinyRobot_2Z_spawn, {is_charger: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, tinyRobot_2Z], spawn_robot_type: [1, TinyRobot]}]
       - [137.817, 113.805, 0, ""]
-      - [140.011, 101.007, 0, tinyRobot_2W_spawn, {is_charger: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, tinyRobot_2W], spawn_robot_type: [1, TinyRobot]}]
+      - [142.087, 104.908, 0, tinyRobot_2W_spawn, {is_charger: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, tinyRobot_2W], spawn_robot_type: [1, TinyRobot]}]
+      - [71.84399999999999, 24.055, 0, tinyRobot_2V_spawn, {is_charger: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, tinyRobot_2V], spawn_robot_type: [1, TinyRobot]}]
+      - [85.01600000000001, 65.40900000000001, 0, tinyRobot_2U_spawn, {is_charger: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, tinyRobot_2U], spawn_robot_type: [1, TinyRobot]}]
+      - [99.58199999999999, 32.331, 0, "", {is_passthrough_point: [4, true]}]
     walls:
       - [0, 1, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
       - [1, 2, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
@@ -505,6 +515,7 @@ levels:
       - [130, 189, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [140, 190, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [190, 130, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [124, 217, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
     layers:
       robot-map_L3:
         color: [1, 0, 0, 0.5]
@@ -536,7 +547,7 @@ levels:
       - {model_name: OpenRobotics/LitterBin, name: OpenRobotics/LitterBin, static: true, x: 318.848, y: 251.762, yaw: 1.5708, z: 0}
       - {model_name: OpenRobotics/LitterBin, name: OpenRobotics/LitterBin, static: true, x: 49.61, y: 99.43300000000001, yaw: 1.5708, z: 0}
     vertices:
-      - [189.236, 80.325, 0, "", {lift_cabin: [1, service_lift]}]
+      - [189.236, 78.89100000000001, 0, "", {lift_cabin: [1, service_lift]}]
       - [253.608, 20.779, 0, ""]
       - [171.276, 19.85, 0, ""]
       - [171.276, 30.374, 0, ""]
@@ -566,12 +577,12 @@ levels:
       - [62.897, 134.332, 0, ""]
       - [278.771, 364.172, 0, ""]
       - [253.03, 53.6, 0, ""]
-      - [203.795, 53.827, 0, ""]
-      - [204.021, 64.264, 0, ""]
+      - [204.006, 53.943, 0, ""]
+      - [204.403, 64.723, 0, ""]
       - [136.862, 53.147, 0, ""]
       - [167.038, 53.827, 0, ""]
-      - [167.038, 64.718, 0, ""]
-      - [177.021, 65.172, 0, ""]
+      - [166.896, 64.81100000000001, 0, ""]
+      - [190.134, 58.317, 0, ""]
       - [136.862, 52.012, 0, ""]
       - [137.316, 100.113, 0, ""]
       - [253.484, 100.794, 0, ""]
@@ -660,7 +671,7 @@ levels:
       - [282.681, 274.9, 0, ""]
       - [834.984, 292.694, 0, ""]
       - [834.984, 407.813, 0, ""]
-      - [186.71, 45.349, 0, ""]
+      - [186.71, 45.349, 0, L3_liftlobby, {is_parking_spot: [4, true]}]
       - [108.285, 43.798, 0, ""]
       - [111.905, 114.811, 0, tinyRobotCharger]
       - [201.673, 152.359, 0, ""]
@@ -753,6 +764,8 @@ levels:
       - [937.189, 239.816, 0, L3_zoneC_clean_23]
       - [889.673, 257.635, 0, L3_zoneC_clean_24]
       - [845.897, 254.995, 0, L3_zoneC_clean_25]
+      - [229.772, 35.45, 0, tinyRobot_3X_spawn, {is_charger: [4, true], is_holding_point: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, tinyRobot_3X], spawn_robot_type: [1, TinyRobot]}]
+      - [177.057, 65.34099999999999, 0, ""]
     walls:
       - [1, 2, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
       - [2, 3, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
@@ -783,7 +796,6 @@ levels:
       - [30, 31, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
       - [32, 33, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
       - [33, 34, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
-      - [34, 35, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
       - [36, 37, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
       - [37, 38, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
       - [38, 1, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
@@ -860,6 +872,7 @@ levels:
       - [117, 104, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
       - [116, 118, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
       - [118, 110, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [34, 218, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
   TRL_L4:
     constraints:
       - {ids: ["{022ff449-00a9-481f-9962-7b8849f36c36}", "{7b24acd5-65c1-4df6-94b0-c2994c3e2866}"]}
@@ -922,6 +935,7 @@ levels:
       - [127, 203, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [203, 204, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [204, 189, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [123, 242, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
     layers:
       robot-map_L4:
         color: [1, 0, 0, 0.5]
@@ -1026,16 +1040,16 @@ levels:
       - [196.909, 1266.93, 0, ""]
       - [197.284, 1321.936, 0, ""]
       - [232.766, 1268.244, 0, ""]
-      - [232.578, 1282.136, 0, ""]
-      - [243.092, 1281.761, 0, ""]
-      - [270.501, 1281.385, 0, ""]
-      - [283.079, 1281.01, 0, ""]
+      - [232.33, 1280.377, 0, ""]
+      - [244.498, 1280.199, 0, ""]
+      - [271.675, 1280.732, 0, ""]
+      - [282.333, 1280.821, 0, ""]
       - [282.892, 1320.998, 0, ""]
       - [232.391, 1320.998, 0, ""]
       - [297.723, 1320.81, 0, ""]
       - [297.347, 1268.244, 0, ""]
       - [272.566, 1267.868, 0, ""]
-      - [272.378, 1281.385, 0, ""]
+      - [272.474, 1278.778, 0, ""]
       - [206.088, 1227.862, 0, ""]
       - [197.748, 1241.517, 0, ""]
       - [206.546, 1241.517, 0, ""]
@@ -1076,7 +1090,7 @@ levels:
       - [536.1, 1671.521, 0, ""]
       - [100.312, 383.825, 0, ""]
       - [308.725, 908.41, 0, ""]
-      - [252.763, 1253.748, 0, ""]
+      - [252.763, 1253.748, 0, L4_liftlobby, {is_parking_spot: [4, true]}]
       - [180.592, 1254.921, 0, ""]
       - [180.885, 1344.402, 0, ""]
       - [263.031, 1360.538, 0, ""]
@@ -1110,7 +1124,7 @@ levels:
       - [417.712, 1492.696, 0, ""]
       - [516.587, 1493.715, 0, ""]
       - [516.332, 1540.349, 0, ""]
-      - [258.438, 1298.305, 0, "", {lift_cabin: [1, service_lift]}]
+      - [258.438, 1296.679, 0, "", {lift_cabin: [1, service_lift]}]
       - [197.885, 274.322, 0, L4_zoneA_clean_6]
       - [140.223, 178.171, 0, L4_zoneA_clean_2]
       - [161.676, 230.529, 0, L4_zoneA_clean_1]
@@ -1195,6 +1209,7 @@ levels:
       - [421.903, 1573.679, 0, L4_zoneC_clean_25]
       - [435.108, 1620.81, 0, L4_zoneC_clean_22]
       - [489.643, 1620.81, 0, L4_zoneC_clean_15]
+      - [309.261, 1247.559, 0, tinyRobot_4X_spawn, {is_charger: [4, true], is_holding_point: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, tinyRobot_4X], spawn_robot_type: [1, TinyRobot]}]
     walls:
       - [0, 1, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
       - [1, 2, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
@@ -1370,6 +1385,7 @@ levels:
       - [105, 112, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [112, 106, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [106, 113, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [101, 245, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
     layers:
       robot-map_L5:
         color: [1, 0, 0, 0.5]
@@ -1402,7 +1418,7 @@ levels:
       - {model_name: OpenRobotics/LitterBin, name: OpenRobotics/LitterBin, static: true, x: 532.306, y: 1124.09, yaw: 1.5708, z: 0}
       - {model_name: OpenRobotics/LitterBin, name: OpenRobotics/LitterBin, static: true, x: 617.293, y: 1123.368, yaw: 1.5708, z: 0}
     vertices:
-      - [169.458, 867.5599999999999, 0, "", {lift_cabin: [1, service_lift]}]
+      - [169.458, 866.365, 0, "", {lift_cabin: [1, service_lift]}]
       - [128.894, 22.119, 0, ""]
       - [33.157, 15.62, 0, ""]
       - [30.657, 62.114, 0, ""]
@@ -1450,7 +1466,7 @@ levels:
       - [150.265, 845.101, 0, ""]
       - [150.638, 853.482, 0, ""]
       - [157.529, 853.482, 0, ""]
-      - [178.573, 854.227, 0, ""]
+      - [181.192, 854.173, 0, ""]
       - [181.181, 854.227, 0, ""]
       - [180.808, 845.101, 0, ""]
       - [203.343, 844.542, 0, ""]
@@ -1503,7 +1519,7 @@ levels:
       - [16.1, 380.199, 0, ""]
       - [24.715, 380.423, 0, ""]
       - [25.274, 370.913, 0, ""]
-      - [169.2, 834.943, 0, ""]
+      - [166.476, 834.644, 0, L5_liftlobby, {is_parking_spot: [4, true]}]
       - [313.698, 1050.944, 0, L5_zoneB_start]
       - [327.986, 1051.089, 0, L5_zoneB, {dock_name: [1, L5_zoneB], is_cleaning_zone: [4, true]}]
       - [293.492, 1061.336, 0, cleanerBotA_5B_spawn, {is_charger: [4, true], is_holding_point: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, cleanerBotA_5B], spawn_robot_type: [1, CleanerBotA]}]
@@ -1647,6 +1663,7 @@ levels:
       - [485.167, 1105.942, 0, L5_zoneC_clean_40]
       - [494.622, 1105.693, 0, L5_zoneC_clean_41]
       - [495.12, 1058.418, 0, L5_zoneC_clean_42]
+      - [193.141, 833.615, 0, tinyRobot_5X_spawn, {is_charger: [4, true], is_holding_point: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, tinyRobot_5X], spawn_robot_type: [1, TinyRobot]}]
     walls:
       - [1, 2, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
       - [2, 3, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
@@ -1772,6 +1789,8 @@ levels:
       - [66, 79, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [59, 138, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [138, 139, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [55, 222, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
+      - [222, 223, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
     layers:
       robot-map_L6:
         color: [1, 0, 0, 0.5]
@@ -1793,7 +1812,7 @@ levels:
     models:
       - {model_name: OpenRobotics/Bookshelf, name: OpenRobotics/Bookshelf, static: true, x: 111.268, y: 1106.203, yaw: 1.5708, z: 0}
     vertices:
-      - [202.686, 1150.502, 0, "", {lift_cabin: [1, service_lift]}]
+      - [202.686, 1149.084, 0, "", {lift_cabin: [1, service_lift]}]
       - [195.591, 4.032, 0, ""]
       - [48.115, 4.032, 0, ""]
       - [39.069, 128.756, 0, ""]
@@ -1823,7 +1842,7 @@ levels:
       - [236.316, 1169.832, 0, ""]
       - [236.677, 1133.689, 0, ""]
       - [224.871, 1113.209, 0, ""]
-      - [224.389, 1169.471, 0, ""]
+      - [224.402, 1168.487, 0, ""]
       - [180.054, 1169.23, 0, ""]
       - [180.776, 1134.292, 0, ""]
       - [150.778, 1122.847, 0, ""]
@@ -1848,7 +1867,7 @@ levels:
       - [63.415, 375.689, 0, ""]
       - [22.712, 746.183, 0, ""]
       - [270.768, 745.835, 0, ""]
-      - [200.399, 1117.74, 0, service-lift_holding_L6, {is_holding_point: [4, true], is_parking_spot: [4, true]}]
+      - [199.908, 1116.673, 0, L6_liftlobby, {is_holding_point: [4, true], is_parking_spot: [4, true]}]
       - [126.224, 1116.645, 0, central-corridor_l6]
       - [127.867, 1188.357, 0, tinyRobot1_charger, {is_charger: [4, true], is_holding_point: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, tinyRobot1], spawn_robot_type: [1, TinyRobot]}]
       - [199.852, 1213.538, 0, tinyRobot0_charger, {is_charger: [4, false], is_holding_point: [4, true], spawn_robot_name: [1, ""], spawn_robot_type: [1, ""]}]
@@ -2015,6 +2034,8 @@ levels:
       - [57.767, 743.872, 0, L6_zoneB_clean_80]
       - [58.451, 773.53, 0, L6_zoneB_clean_81]
       - [133.66, 683.163, 0, L6_zoneB_clean_34]
+      - [199.786, 1102.734, 0, ""]
+      - [226.929, 1102.367, 0, tinyRobot_6X_spawn, {is_charger: [4, true], is_holding_point: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, tinyRobot_6X], spawn_robot_type: [1, TinyRobot]}]
     walls:
       - [1, 2, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
       - [2, 3, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
@@ -2071,14 +2092,14 @@ levels:
       - [77, 78, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
 lifts:
   service_lift:
-    depth: 2.6
+    depth: 2.3
     doors:
       service_lift_door:
         door_type: 2
         motion_axis_orientation: 0
-        width: 2
+        width: 1.9
         x: 0
-        y: 1
+        y: 1.2
     highest_floor: TRL_L6
     initial_floor_name: TRL_L2
     level_doors:
@@ -2090,8 +2111,8 @@ lifts:
     lowest_floor: TRL_L2
     plugins: true
     reference_floor_name: TRL_L2
-    width: 3.7
+    width: 3.4
     x: 150
-    y: 65.09999999999999
-    yaw: 0.01
+    y: 63.9
+    yaw: 0
 name: trl
