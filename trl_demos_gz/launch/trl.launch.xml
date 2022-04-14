@@ -1,7 +1,10 @@
 <?xml version='1.0' ?>
 <!-- Launching the world file only on gazebo with rmf -->
 
-<launch>
+<launch>  
+  
+  <node pkg="trl_demos_gz" exec="gazebo_step.sh" name="increase_gazebo_step_size"/>
+
   <arg name="gazebo_version" default="11"/>
   <arg name="use_sim_time" default="true"/>
   <arg name="failover_mode" default="false"/>
@@ -19,5 +22,4 @@
     <arg name="gazebo_version" value="$(var gazebo_version)" />
   </include>
 
-  <node pkg="trl_demos_gz" exec="gazebo_step.sh" name="increase_gazebo_step_size"/>
 </launch>

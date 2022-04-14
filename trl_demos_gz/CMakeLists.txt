@@ -10,6 +10,7 @@ install(DIRECTORY
 )
 install(PROGRAMS
   scripts/gazebo_step.sh
+  scripts/increase_gazebo_step
   DESTINATION lib/${PROJECT_NAME}
 )
 
