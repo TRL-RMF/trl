@@ -1,4 +1,4 @@
     <physics type="ode">
-      <max_step_size>0.006</max_step_size>
+      <max_step_size>0.008</max_step_size>
     </physics>
     
