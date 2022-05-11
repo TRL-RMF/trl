@@ -10,6 +10,7 @@ Create a new workspace & clone repo into source folder.
 mkdir -p ~/trl_demos_ws/src
 cd ~/trl_demos_ws/src
 git clone git@github.com:siot-decada-robotics/trl.git
+git clone https://github.com/siot-decada-robotics/trl.git  ##if above doesn't work
 ```
 ## Common commands
 ```sh
