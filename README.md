@@ -18,6 +18,7 @@ colcon build
 traffic-editor
 ros2 launch trl_demos_gz trl.launch.xml
 ros2 run rmf_demos_tasks dispatch_clean -cs test_zone -st 0 --use_sim_time
+ros2 run rmf_demos_tasks dispatch_bookshelf -cs test_zone -st 0 --use_sim_time
 python3 cleaningtaskcoordinates.py 
 ```
 You can find more commands from the [rmf_demos package](https://github.com/open-rmf/rmf_demos).
