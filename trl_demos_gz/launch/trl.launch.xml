@@ -28,6 +28,6 @@
   </include>
 
   <!-- CAATO Fleet Adapter -->
-  <node pkg="fleet_adapter_caato" exec="fleet_adapter_caato" name="fleet_adapter_caato" args="-c src/fleet_adapter_caato/configs/caato_config.yaml -n install/trl_demos_maps/share/trl_demos_maps/maps/trl/nav_graphs/0.yaml --use_sim_time"></node>
+  <node pkg="fleet_adapter_caato" exec="fleet_adapter_caato" name="fleet_adapter_caato" args="-c src/fleet_adapter_caato/configs/caato_config.yaml -n src/fleet_adapter_caato/nav_graphs/trl/0.yaml --use_sim_time"></node>
 
 </launch>
